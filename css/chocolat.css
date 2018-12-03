@@ -1,0 +1,151 @@
+body{
+	margin:0;
+	padding:0;
+}
+#Choco_overlay{
+	background:rgba(0, 0, 0, 0.9) !important;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	width: 100%;
+	height: 100%;
+	display:none;
+	padding:0;
+	margin:0;
+}
+#Choco_content{
+	display:none;
+	width:800px;
+	height:600px;
+	z-index:1001;
+	position:fixed;
+	left:50%;
+	top:50%;
+	margin-left:-400px;
+	margin-top:-300px;
+	border-top:1px solid transparent;/*Yes, adjust image perfectly at the center of a box, don't know why.*/
+}
+#Choco_left_arrow{
+	position: absolute;
+	left: -35%;
+	top: 10%;
+	cursor: pointer;
+	background: url(../images/left.png) 50% 50% no-repeat!important;
+	z-index: 1001;
+	display: none;
+}
+#Choco_right_arrow{
+	position: absolute;
+	right: -35%;
+	top: 10%;
+	cursor: pointer;
+	background: url(../images/right.png) 50% 50% no-repeat!important;
+	z-index: 1001;
+	display: none;
+}
+.Choco_arrows{
+	background-repeat:no-repeat;
+	display:none;
+	position:relative;
+	cursor:pointer;
+	width:49%;
+	top:-100%;
+	height:100%;
+	margin-top:-30px;
+}
+#Choco_container_photo{
+	text-align:center;
+	width:800px;
+	height:600px;
+	margin-top: 14px;
+}
+#Choco_container_description{
+	padding:0;
+	height:26px;
+	width:100%;
+	color:#FFFFFF;
+	font-family:Tahoma;
+	clear:both;
+	position:relative;
+	font-size:11px;
+	margin-top:-8px;
+	overflow:hidden;
+	visibility:hidden;
+}
+#Choco_container_title{
+	float:left;
+	padding:5px;
+}
+#Choco_container_via{
+	padding:5px;
+	float:right;
+	color: #b29600;
+}
+#Choco_container_via a{
+	color:gray;
+}
+#Choco_container_via a:hover{
+	color:white;
+	background:gray;
+}
+#Choco_close{
+	width:35px;
+	height:35px;
+	background-image:url(../images/close.png)!important;
+	background-repeat:no-repeat;
+	z-index:1002;
+	cursor:pointer;
+	position: absolute;
+	right: -14%;
+	top: -5px;
+	display:none;
+	z-index: 1003;
+}
+#Choco_loading{
+	width:24px;
+	height:24px;
+	background-image:url(../images/loading.png);
+	background-repeat:no-repeat;
+	z-index:1002;
+	cursor:pointer;
+	float:right;
+	margin-top:-20px;
+	display:none;
+}
+#Choco_bigImage{
+	display:none;
+	position:relative;
+	width:100%;
+	height:100%;
+	margin-top:-5px;
+}
+@media screen and (max-width: 375px) {
+	#Choco_container_via,
+	#Choco_left_arrow,
+	#Choco_right_arrow,
+	#Choco_close,
+	.Choco_arrows,
+	#Choco_overlay,
+	#Choco_container_photo{
+		display: none!important;
+	}	
+}
+@media screen and (max-width: 768px) {
+	#Choco_close {
+		right: -12%;
+		top: -50px;
+	}
+	#Choco_left_arrow{
+		left: -31%;
+	}
+	#Choco_right_arrow{
+		right: -31%;
+	}
+}
+@media screen and (min-width: 1919px) {
+	#Choco_close {
+		top: -25px!important;
+	}
+	}
+}
